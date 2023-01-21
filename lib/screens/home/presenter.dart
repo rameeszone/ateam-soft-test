@@ -2,11 +2,12 @@ import 'package:ateam_test/screens/home/view.dart';
 
 abstract class AbstractHomePresenter {
   void onViewAttached(AbstractHomeView view);
+
   void onViewDetached();
 }
 
 class HomePresenter implements AbstractHomePresenter {
-   AbstractHomeView? _view;
+  AbstractHomeView? _view;
 
   HomePresenter();
 
@@ -19,5 +20,4 @@ class HomePresenter implements AbstractHomePresenter {
   void onViewDetached() {
     _view = null;
   }
-
 }
